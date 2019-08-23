@@ -1,13 +1,14 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 ruby '~> 2.6'
 
-#git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+# git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
-# gem "rails"
-#gem 'rmagick'
+# Some annoying issues at the moment: rmagick 4.0] has issues with Imagemagick v 7.0 :-(
+# gem 'rmagick'
+
 gem 'rhex'
 
 group :development, :test do
