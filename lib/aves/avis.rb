@@ -1,20 +1,20 @@
 # frozen_string_literal: true
 
-# The +Avis+ class generate the moving object for this simulation. Every instance has a +position+, a +velocity+ and an +acceleration+ as vectors, 
+# The +Avis+ class generate the moving object for this simulation. Every instance has a +position+, a +velocity+ and an +acceleration+ as vectors,
 # and a +color+ as string in the #rrggbb format.
 class Avis
-  # Position of the object (a vector) 
+  # Position of the object (a vector)
   attr_accessor :position
-  # Velocity of the object (a vector) 
+  # Velocity of the object (a vector)
   attr_accessor :velocity
-  # Acceleration the object (a vector) 
+  # Acceleration the object (a vector)
   attr_accessor :acceleration
   # how aware the object is of his surrounding when in motion (array of 6 float ranging from 0 to 1: Head, Tail, Head-Sx, Head-Dx, Tail-Sx, Tail-Dx)
   attr_accessor :foresight
   # Used to graphically spot the object on the map
   attr_accessor :color
-  
-  # Create a new objet to place in the world you may assign a +position+, a +velocity+ and an +acceleration+ 
+
+  # Create a new objet to place in the world you may assign a +position+, a +velocity+ and an +acceleration+
   # :args: args hash with parameters:
   #   :x, :y, :z    -> object initial position on the map
   #   :vx, vy, vz -> object initial velocity
@@ -28,5 +28,4 @@ class Avis
     @color = args[:color]
     @color ||= '#1199bb'
   end
-
 end

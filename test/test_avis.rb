@@ -1,9 +1,10 @@
+# frozen_string_literal: true
 
 class TestAvis < Minitest::Test
   def setup
-    @avis = Avis.new(x: 10, y: 12, vx: 2, vy: 1, ax: 1, ay: 2, color: '#ff0000',foresight: [1, 0, 0.5, 0.5, 0, 0])
+    @avis = Avis.new(x: 10, y: 12, vx: 2, vy: 1, ax: 1, ay: 2, color: '#ff0000', foresight: [1, 0, 0.5, 0.5, 0, 0])
   end
-  
+
   def test_avis_position
     assert_equal 10, @avis.position.x
     assert_equal 12, @avis.position.y
@@ -25,9 +26,8 @@ class TestAvis < Minitest::Test
   def test_avis_color
     assert_equal '#ff0000', @avis.color
   end
-  
+
   def test_avis_foresight
     assert_equal [1, 0, 0.5, 0.5, 0, 0], @avis.foresight
   end
-
 end
